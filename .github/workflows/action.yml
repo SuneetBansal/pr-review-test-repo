@@ -1,0 +1,15 @@
+name: 'pr-review'
+on: [pull_request]
+jobs:
+  job1:
+    name: 'code-review'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Code Review
+        uses: SuneetBansal/ai-driven-pr-review@main
+        with:
+          openai-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt: 'Please review the code, provide your feedbacks. Please assume that code is in Javascript and you are following es2015 standards for code reivew.'
