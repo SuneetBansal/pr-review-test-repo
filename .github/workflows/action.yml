@@ -12,4 +12,4 @@ jobs:
         uses: SuneetBansal/ai-driven-pr-review@main
         with:
           openai-key: ${{ secrets.OPENAI_API_KEY }}
-          prompt: 'Please review the code, provide your feedbacks. Please assume that code is in Javascript and you are following es2015 standards for code reivew.'
+          prompt: 'Please review the Javascript code from Performance point of view, provide your feedbacks. Assume that you are using ES2015 standards and apis.'
